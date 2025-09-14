@@ -1,0 +1,102 @@
+{
+  "output": "",
+  "height": 60,
+  "spacing": 10,
+  "modules-left": ["hyprland/workspaces", "custom/spotify"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "privacy",
+    "idle_inhibitor",
+    "cpu",
+    "memory",
+    "temperature",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "battery",
+    "clock"
+  ],
+  "hyprland/window": {
+    "separate-outputs": true
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%A %d.%m.%Y %H.%M}"
+  },
+  "cpu": {
+    "format": "{max_frequency}ghz {usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-full": "{icon}",
+    "format-charging": "󰂄",
+    "format-plugged": "",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{capacity}%",
+    "tooltip-format-charging": "{capacity}% - charging",
+    "tooltip-format-plugged": "{capacity}% - not charging"
+  },
+  "network": {
+    "format-wifi": "󰖩",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "{essid} ({signalStrength}%)",
+    "on-click": "hyprctl dispatch exec [floating] iwgtk"
+  },
+  "pulseaudio": {
+    "justify": "center",
+    "format": "{icon}",
+    "format-bluetooth": "{icon} ",
+    "format-bluetooth-muted": "󰝟 {icon}",
+    "format-muted": "󰝟",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "idle_inhibitor": {
+    "justify": "center",
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰒳",
+      "deactivated": "󰒲"
+    },
+    "timeout": 30.5
+  },
+  "bluetooth": {
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-disabled": "",
+    "format-connected": "󰂱",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}"
+  },
+  "custom/spotify": {
+    "format": "{icon} {text}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "spotify": ""
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/spotify.py"
+  }
+}

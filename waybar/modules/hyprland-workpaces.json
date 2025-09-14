@@ -1,0 +1,35 @@
+{
+  "hyprland/workspaces": {
+    "format": "{icon} {windows} ",
+    "format-window-separator": " ",
+    "window-rewrite-default": "",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "〇"
+    },
+    "window-rewrite": {
+      "title<.*youtube.*>": "",
+      "title<.*zen.*>": "󰬡",
+      "title<.*nvim.*>": "",
+      "title<.*teams.*>": "󰊻",
+      "title<.*slack.*>": "",
+      "title<.*test.*>": "󰙨",
+      "class<firefox>": "",
+      "class<kitty>": "󰄛",
+      "title .*github.*>": "",
+      "ghostty": "",
+      "spotify": "",
+      "discord": "",
+      "thunderbird": "",
+      "chromium": ""
+    }
+  }
+}

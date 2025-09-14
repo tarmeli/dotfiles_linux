@@ -1,0 +1,15 @@
+{
+  "output": "",
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "clock"
+  ],
+  "hyprland/window": {
+    "separate-outputs": true
+  }
+}
